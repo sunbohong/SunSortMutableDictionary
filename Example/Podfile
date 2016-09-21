@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SunSortMutableDictionary_Tests' do
+  pod 'SunSortMutableDictionary', :path => '../'
+  
+  
+end

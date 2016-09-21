@@ -1,0 +1,16 @@
+PODS:
+  - SunSortMutableDictionary (0.4.0)
+
+DEPENDENCIES:
+  - SunSortMutableDictionary (from `../`)
+
+EXTERNAL SOURCES:
+  SunSortMutableDictionary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SunSortMutableDictionary: df4d1202332c77a0912e17cb54bfd05d7d7bba57
+
+PODFILE CHECKSUM: 26f56c8c46f0bf8508e1e867c2e09a1dd7e49f0f
+
+COCOAPODS: 1.1.0.beta.2
