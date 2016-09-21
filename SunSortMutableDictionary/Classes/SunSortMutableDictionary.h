@@ -12,4 +12,6 @@
 
 @property (nonatomic,copy) NSComparator comparator;
 
+- (void)setObject:(nullable id)obj forKeyedSubscript:(id <NSCopying>)key;
+
 @end
