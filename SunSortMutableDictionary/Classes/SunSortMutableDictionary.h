@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SunSortMutableDictionary : NSDictionary
 
 @property (nonatomic,copy) NSComparator comparator;
@@ -15,3 +17,5 @@
 - (void)setObject:(nullable id)obj forKeyedSubscript:(id <NSCopying>)key;
 
 @end
+
+NS_ASSUME_NONNULL_END
