@@ -28,7 +28,7 @@
     [super tearDown];
 }
 
-- (void)testASC
+- (void)testAsc
 {
     SunSortMutableDictionary *dic = [SunSortMutableDictionary new];
     dic.comparator = ^(NSString* obj1,NSString* obj2){
