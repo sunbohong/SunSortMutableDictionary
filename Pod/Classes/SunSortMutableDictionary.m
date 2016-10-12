@@ -24,6 +24,13 @@
     return self;
 }
 
+- (instancetype)initWithObjects:(const id _Nonnull __unsafe_unretained *)objects forKeys:(const id<NSCopying>  _Nonnull __unsafe_unretained *)keys count:(NSUInteger)cnt {
+    if (self = [super init]) {
+        __dic = [NSMutableDictionary dictionaryWithObjects:objects forKeys:keys count:cnt];
+    }
+    return self;
+}
+
 - (nullable id)objectForKeyedSubscript:(NSString *)key {
     return __dic[key];
 }
