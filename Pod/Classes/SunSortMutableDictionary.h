@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SunSortMutableDictionary : NSDictionary
 
-@property (nonatomic,copy) NSComparator comparator;
+@property (nonatomic, copy) NSComparator comparator;
 
 - (void)setObject:(nullable id)obj forKeyedSubscript:(id <NSCopying>)key;
 

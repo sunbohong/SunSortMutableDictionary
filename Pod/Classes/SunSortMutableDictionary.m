@@ -13,44 +13,44 @@
     NSMutableDictionary *__dic;
 }
 
-+(instancetype)dictionary{
++ (instancetype)dictionary {
     return [SunSortMutableDictionary new];
 }
 
--(instancetype)init{
-    if (self=[super init]) {
-        __dic=[NSMutableDictionary dictionary];
+- (instancetype)init {
+    if (self = [super init]) {
+        __dic = [NSMutableDictionary dictionary];
     }
     return self;
 }
 
-- (nullable id)objectForKeyedSubscript:(NSString*)key{
+- (nullable id)objectForKeyedSubscript:(NSString *)key {
     return __dic[key];
 }
 
-- (void)setObject:(nullable id)obj forKeyedSubscript:(id <NSCopying>)key{
-    __dic[key]=obj;
+- (void)setObject:(nullable id)obj forKeyedSubscript:(id <NSCopying>)key {
+    __dic[key] = obj;
 }
 
--(NSUInteger)count{
+- (NSUInteger)count {
     return __dic.count;
 }
 
--(NSString *)description{
-    return [@"" stringByAppendingFormat:@"%@:%p\n%@",[self class],self,__dic];
+- (NSString *)description {
+    return [@"" stringByAppendingFormat:@"%@:%p\n%@", [self class], self, __dic];
 }
 
--(NSEnumerator *)keyEnumerator{
+- (NSEnumerator *)keyEnumerator {
     if (!self.comparator) {
         return __dic.keyEnumerator;
-    }else{
-        NSMutableArray *arr=[NSMutableArray arrayWithArray:__dic.allKeys];
+    } else{
+        NSMutableArray *arr = [NSMutableArray arrayWithArray:__dic.allKeys];
         [arr sortUsingComparator:self.comparator];
         return arr.objectEnumerator;
     }
 }
 
--(id)objectForKey:(id)aKey{
+- (id)objectForKey:(id)aKey {
     return __dic[aKey];
 }
 
